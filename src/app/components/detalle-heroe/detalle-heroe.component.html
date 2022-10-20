@@ -1,0 +1,37 @@
+<div class="row mt-4">
+    <div class="col-2">
+    </div>
+    <div class="col-8">
+        <p class=" fs-1 fw-bold titolSenseSalt text-uppercase">{{nombreDetalle}} </p><p class="fs-2 titolSenseSalt">({{aparicion | date:'yyyy'}})</p>            
+        
+    </div>
+    <div class="col-2">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-4">
+        <img src="{{imagen}}" alt="{{nombreDetalle}">    
+        <div class="d-grid gap-1 mt-4">
+            <a [routerLink]="['/Heroes']" class="btn btn-outline-danger">Regresar</a> 
+        </div>       
+    </div>
+    <div class="col-4">
+        <p class=" fs-1 fw-bold">{{nombreDetalle}}</p>
+        <hr>
+        <p class=" fs-5">{{bio}}</p>
+
+        <div *ngIf = " casa == 'Marvel'">
+            <img src="\assets\imagen\marvel-logo.png" height="300" width="300">
+        </div>
+        <div *ngIf = "casa == 'DC'">
+            <img src="\assets\imagen\dc-logo.jpg" height="300" width="300">
+        </div>
+
+    </div>
+    <div class="col-2">
+    </div>
+</div>
+

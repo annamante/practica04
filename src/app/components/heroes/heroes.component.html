@@ -1,0 +1,28 @@
+<div class="row mt-5">
+    <div class="col-2">
+    </div>
+    <div class="col-8">
+        <p class=" fs-1 fw-bold titolSenseSalt">Héroes </p><p class="fs-3 titolSenseSalt">Marvel y DC</p>
+        <hr>
+        <div class="row row-cols row-cols-3 g-4">
+            <div *ngFor="let DetalleHeroe of DetalleHeroe">
+                <div class="col">
+                <div class="card">
+                    <img src="{{DetalleHeroe.img}}" class="card-img-top" alt="{{DetalleHeroe.nombre}}">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{{DetalleHeroe.nombre}}</h5>
+                        <p class="card-text">{{DetalleHeroe.bio}}</p>
+                        <p class="card-text"><small class="text-muted">{{DetalleHeroe.aparicion}}</small></p>
+                        <div class="d-grid gap-1">
+                            <a [routerLink]="['/Heroe',DetalleHeroe.id]" class="btn btn-outline-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+    </div>
+</div>
+
