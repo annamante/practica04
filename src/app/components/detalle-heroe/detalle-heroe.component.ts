@@ -79,10 +79,10 @@ export class DetalleHeroeComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id');
+    this.id = this.route.snapshot.paramMap.get('nombre');
 
   for (let i=0; i < this.DetalleHeroe.length; i++){
-    if(this.id == this.DetalleHeroe[i].id) {
+    if(this.id == this.DetalleHeroe[i].nombre||this.id.toLowerCase()==this.DetalleHeroe[i].nombre.toLowerCase()){
         this.nombreDetalle=this.DetalleHeroe[i].nombre;
         this.aparicion=this.DetalleHeroe[i].aparicion;
         this.imagen=this.DetalleHeroe[i].img;

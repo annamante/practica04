@@ -8,12 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HeroesComponent implements OnInit {
 
-  id: any
+  id: any;
+  nombredetalle: any;
+  imgdetalle:any;
+  apariciondetalle: any;
+  biodetalle: any;
+  casadetalle: any;
   
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.id=this.route.snapshot.paramMap.get('id');
+  ngOnInit(): void { 
   }
 
   DetalleHeroe=[

@@ -19,8 +19,8 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (keypress)="regresar()" (keyup)="cargar(textobusqueda.value)" #textobusqueda>
+        <button class="btn btn-outline-primary" type="button" (click)="buscar()">Buscar</button>
       </form>
     </div>
   </div>
