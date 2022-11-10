@@ -11,6 +11,7 @@ export class BusquedaComponent implements OnInit {
     id: any;
     HeroeBusqueda: number[]=[]
     HeroeContador = 0
+    SenseResultats=0
 
     DetalleHeroe=[
       {
@@ -80,6 +81,7 @@ export class BusquedaComponent implements OnInit {
       if(this.DetalleHeroe[i].nombre.toLowerCase().indexOf(this.id.toLowerCase())>=0){
         this.HeroeBusqueda[this.HeroeContador]=this.DetalleHeroe[i].id;
         this.HeroeContador++;
+        this.SenseResultats++;
       }
       }
   }

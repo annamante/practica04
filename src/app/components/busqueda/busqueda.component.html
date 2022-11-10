@@ -4,7 +4,12 @@
     <div class="col-8">
         <span class=" fs-1 fw-bold">Héroes </span><span class="fs-3">Marvel y DC</span>
         <hr>
-        <span class="fs-5">Héroes que su nombre contiene <b>{{id}}</b>:</span>
+        <span class="fs-5">Héroes que su nombre contiene <span class="fs-5 fw-bold text-uppercase">{{id}}</span>:</span>
+                <div *ngIf="SenseResultats==0">
+                    <div> 
+                        <img src="\assets\imagen\SENSERESULTAT.png">
+                    </div>
+                </div>    
                     <div class="row row-cols row-cols-3 g-4 mt-2">
                     <div *ngFor="let Busqueda of HeroeBusqueda">
                         <div *ngFor="let DetalleHeroe of DetalleHeroe">
