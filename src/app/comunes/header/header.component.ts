@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     }
 
   buscar(){
-      this.route.navigate(['/Heroe', this.TextoFinal])
+      this.route.navigate(['/Busqueda', this.TextoFinal])
     }
 
     regresar(){
